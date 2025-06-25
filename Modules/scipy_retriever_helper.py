@@ -30,11 +30,9 @@ class ScipyRetrieverHelper:
         self.sparse_retriever = None
         self.documents: List[Document] = []
         
-        # Timing tracking
+        # Timing tracking - only chunk times
         self.sparse_chunk_times = []
         self.dense_chunk_times = []
-        self.model_loading_time = 0.0
-        self.embedding_computation_time = 0.0
         
         # GPU availability check
         self.gpu_available = self._check_gpu_availability()
@@ -115,7 +113,7 @@ class ScipyRetrieverHelper:
     def analyze_sparse_incremental_cost(self, return_stats: bool = False) -> Optional[Dict]:
         """
         Analyze incremental cost of adding documents to sparse (BM25) retrieval.
-        Rebuilds from scratch for each additional document to measure true incremental cost.
+        Each timing represents the total time to process 1, 2, 3, ... documents.
         
         Args:
             return_stats (bool): If True, return timing statistics
@@ -132,13 +130,13 @@ class ScipyRetrieverHelper:
             def tqdm(iterable, desc="", total=None):
                 return iterable
         
-        start_time = time.time()
         self.sparse_chunk_times = []
         
         for i in tqdm(range(1, len(self.documents) + 1), desc="BM25 Incremental Analysis", unit="docs"):
             chunk_start_time = time.time()
             
             # Rebuild BM25 retriever from scratch with documents 0 to i-1
+            # This timing represents: time to process i documents total
             current_docs = self.documents[:i]
             retriever = BM25Retriever.from_documents(current_docs, k=5)
             
@@ -147,23 +145,16 @@ class ScipyRetrieverHelper:
         
         # Keep the final retriever
         self.sparse_retriever = retriever
-        total_time = time.time() - start_time
         
         if return_stats:
             return {
-                'total_time': total_time,
-                'chunk_times': self.sparse_chunk_times,
-                'time_per_document': total_time / len(self.documents),
-                'avg_chunk_time': np.mean(self.sparse_chunk_times),
-                'min_chunk_time': np.min(self.sparse_chunk_times),
-                'max_chunk_time': np.max(self.sparse_chunk_times),
-                'final_document_count': len(self.documents)
+                'chunk_times': self.sparse_chunk_times
             }
 
     def analyze_dense_incremental_cost(self, return_stats: bool = False) -> Optional[Dict]:
         """
         Analyze incremental cost of adding documents to dense (FAISS) retrieval.
-        Rebuilds from scratch for each additional document to measure true incremental cost.
+        Each timing represents the total time to process 1, 2, 3, ... documents.
         
         Args:
             return_stats (bool): If True, return timing statistics
@@ -180,20 +171,16 @@ class ScipyRetrieverHelper:
             def tqdm(iterable, desc="", total=None):
                 return iterable
         
-        start_time = time.time()
-        
-        # Load model once and track time
-        model_start_time = time.time()
+        # Load model once
         self.dense_model = HuggingFaceEmbeddings(model_name=self.dense_model_name)
-        self.model_loading_time = time.time() - model_start_time
         
         self.dense_chunk_times = []
-        embedding_start_time = time.time()
         
         for i in tqdm(range(1, len(self.documents) + 1), desc="FAISS Incremental Analysis", unit="docs"):
             chunk_start_time = time.time()
             
             # Rebuild FAISS vector store from scratch with documents 0 to i-1
+            # This timing represents: time to process i documents total
             current_docs = self.documents[:i]
             vector_store = FAISS.from_documents(current_docs, self.dense_model)
             
@@ -211,21 +198,10 @@ class ScipyRetrieverHelper:
         
         # Keep the final retriever
         self.dense_retriever = vector_store
-        self.embedding_computation_time = time.time() - embedding_start_time
-        total_time = time.time() - start_time
         
         if return_stats:
             return {
-                'total_time': total_time,
-                'model_loading_time': self.model_loading_time,
-                'embedding_computation_time': self.embedding_computation_time,
-                'chunk_times': self.dense_chunk_times,
-                'time_per_document': total_time / len(self.documents),
-                'avg_chunk_time': np.mean(self.dense_chunk_times),
-                'min_chunk_time': np.min(self.dense_chunk_times),
-                'max_chunk_time': np.max(self.dense_chunk_times),
-                'gpu_used': self.gpu_available,
-                'final_document_count': len(self.documents)
+                'chunk_times': self.dense_chunk_times
             }
 
     def retrieve_sparse(self, query: str, top_k: int = 5) -> Tuple[List[Document], float]:
