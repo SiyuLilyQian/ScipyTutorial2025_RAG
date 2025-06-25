@@ -83,7 +83,7 @@ class ScipyRetrieverHelper:
 
     def initialize_sparse(self, return_stats: bool = False) -> Optional[Dict]:
         """
-        Initialize sparse (BM25) retrieval with per-chunk timing analysis.
+        Initialize sparse (BM25) retrieval with per-chunk timing analysis using incremental approach.
         
         Args:
             return_stats (bool): If True, return timing statistics
@@ -104,22 +104,34 @@ class ScipyRetrieverHelper:
         
         start_time = time.time()
         self.sparse_chunk_times = []
-        accumulated_docs = []
+        current_retriever = None
         
         for i, doc in enumerate(tqdm(self.documents, desc="Adding chunks to BM25")):
             chunk_start_time = time.time()
             
-            # Add current document to accumulated list
-            accumulated_docs.append(doc)
-            
-            # Recreate BM25 retriever with all accumulated documents
-            # This is how BM25Retriever actually works - it needs to be rebuilt
-            retriever = BM25Retriever.from_documents(accumulated_docs, k=5)
+            if current_retriever is None:
+                # First chunk - create new BM25 retriever
+                current_retriever = BM25Retriever.from_documents([doc], k=5)
+            else:
+                # Add current document to existing retriever's document list
+                current_retriever.docs.append(doc)
+                
+                # Rebuild the vectorizer with the updated document list
+                # This simulates the "incremental addition" behavior
+                texts = [d.page_content for d in current_retriever.docs]
+                processed_texts = [current_retriever.preprocess_func(text) for text in texts]
+                
+                # Create new BM25 vectorizer with all documents
+                try:
+                    from rank_bm25 import BM25Okapi
+                    current_retriever.vectorizer = BM25Okapi(processed_texts)
+                except ImportError:
+                    raise ImportError("Please install rank_bm25: pip install rank_bm25")
             
             chunk_time = (time.time() - chunk_start_time) * 1000  # Convert to ms
             self.sparse_chunk_times.append(chunk_time)
         
-        self.sparse_retriever = retriever
+        self.sparse_retriever = current_retriever
         total_time = time.time() - start_time
         
         print(f"Sparse analysis complete! {len(self.sparse_chunk_times)} chunk times recorded.")
