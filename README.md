@@ -25,7 +25,7 @@ This comprehensive tutorial covers the full RAG pipeline:
 ├── Demo_Notebooks/
 │   ├── Scipy_2025_RAG_start_here.ipynb    # MAIN TUTORIAL - Start Here!
 │   ├── Chunking_Demo.ipynb                # Deep dive into chunking strategies
-│   └── Retrieval_Demo.ipynb               # Advanced retrieval performance analysis
+│   └── Retrieval_Demo.ipynb               # Retrieval performance analysis
 ├── Data/
 │   ├── selected_files_scipy/        # 90+ real scientific papers (arXiv format)
 │   └── Scipy_RAG_QA.json           # 500+ curated Q&A pairs for testing
@@ -36,7 +36,6 @@ This comprehensive tutorial covers the full RAG pipeline:
 
 ### Prerequisites
 - Google Colab (recommended) or Jupyter environment
-- HuggingFace account (free) for model access
 - GPU access (optional but recommended for speed)
 
 ### Step 1: Begin Tutorial
