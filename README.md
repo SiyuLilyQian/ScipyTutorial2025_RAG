@@ -11,24 +11,22 @@ This comprehensive tutorial covers the full RAG pipeline:
 1. **LLM Setup & Integration**: Configure open-source language models
 2. **Document Chunking**: Master 4 different chunking strategies for optimal retrieval
 3. **Retrieval Systems**: Build both sparse (BM25) and dense (FAISS) retrievers
-4. **Performance Analysis**: Benchmark retrieval speed, accuracy, and scalability
-5. **RAG Integration**: Connect retrievers with LLMs for question-answering
-6. **Advanced Techniques**: Implement hybrid retrievers and cross-encoder rerankers
-7. **Interactive Apps**: Deploy your RAG system with Gradio interfaces
+4. **RAG Integration**: Connect retrievers with LLMs for question-answering
+5. **Advanced Techniques**: Implement hybrid retrievers and cross-encoder rerankers
+6. **Interactive Apps**: Deploy your RAG system with Gradio interfaces
 
 ## 📁 Complete Project Structure
 
 ```
 ├── Modules/
-│   ├── scipy_retriever_helper.py    # Retrieval system with performance analysis
+│   ├── scipy_retriever_helper.py    # Basic retrieval class for both sparse and dense methods
 │   └── scipy_chunking_helper.py     # 4 chunking methods (fixed, recursive, semantic, improved)
 ├── Demo_Notebooks/
 │   ├── Scipy_2025_RAG_start_here.ipynb    # MAIN TUTORIAL - Start Here!
-│   ├── Chunking_Demo.ipynb                # Deep dive into chunking strategies
-│   └── Retrieval_Demo.ipynb               # Retrieval performance analysis
+│   └── Chunking_Demo.ipynb                # Deep dive into chunking strategies
 ├── Data/
 │   ├── selected_files_scipy/        # 90+ real scientific papers (arXiv format)
-│   └── Scipy_RAG_QA.json           # 500+ curated Q&A pairs for testing
+│   └── Scipy_RAG_QA.json            # 500+ curated Q&A pairs for testing
 └── README.md                        # This comprehensive guide
 ```
 
@@ -50,7 +48,6 @@ This is your main tutorial notebook with:
 
 ### Step 2: Explore Specialized Notebooks
 - **Chunking Deep Dive**: `Chunking_Demo.ipynb` - Compare 4 chunking methods
-- **Performance Analysis**: `Retrieval_Demo.ipynb` - Benchmark retrieval systems
 
 ## 📚 Tutorial Dataset: SPIQA Papers
 
@@ -138,4 +135,4 @@ By completing this tutorial, you'll have:
 - Advanced hybrid retrieval with reranking
 - Production-ready code for your own projects
 
-**Ready to transform how AI accesses and uses knowledge? Let's build some RAG systems!** 
+**Ready to transform how AI accesses and uses knowledge? Let's build some RAG systems!**
