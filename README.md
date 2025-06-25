@@ -20,7 +20,7 @@ This comprehensive tutorial covers the full RAG pipeline:
 
 ```
 ├── Modules/
-│   ├── scipy_retriever_helper.py    # Advanced retrieval system with performance analysis
+│   ├── scipy_retriever_helper.py    # Retrieval system with performance analysis
 │   └── scipy_chunking_helper.py     # 4 chunking methods (fixed, recursive, semantic, improved)
 ├── Demo_Notebooks/
 │   ├── Scipy_2025_RAG_start_here.ipynb    # MAIN TUTORIAL - Start Here!
