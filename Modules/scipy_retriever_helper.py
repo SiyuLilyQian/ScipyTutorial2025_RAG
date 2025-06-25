@@ -15,7 +15,6 @@ class ScipyRetrieverHelper:
     - Initialize both sparse and dense retrievers
     - Track per-chunk loading times for performance analysis
     - Support GPU acceleration where available
-    - Preprocess text for optimal sparse retrieval
     """
     
     def __init__(self, dense_model_name: str = "all-MiniLM-L6-v2"):
