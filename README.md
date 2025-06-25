@@ -8,7 +8,7 @@ This is the complete hands-on workshop for the **SciPy 2025 Conference RAG Tutor
 
 This comprehensive tutorial covers the full RAG pipeline:
 
-1. **LLM Setup & Integration**: Configure open-source language models (Granite-3.1-2B)
+1. **LLM Setup & Integration**: Configure open-source language models
 2. **Document Chunking**: Master 4 different chunking strategies for optimal retrieval
 3. **Retrieval Systems**: Build both sparse (BM25) and dense (FAISS) retrievers
 4. **Performance Analysis**: Benchmark retrieval speed, accuracy, and scalability
