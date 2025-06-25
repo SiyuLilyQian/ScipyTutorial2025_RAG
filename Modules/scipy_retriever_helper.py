@@ -81,9 +81,41 @@ class ScipyRetrieverHelper:
         docs = self._to_langchain_docs(chunks)
         self.documents.extend(docs)
 
-    def initialize_sparse(self, return_stats: bool = False) -> Optional[Dict]:
+    def initialize_sparse(self) -> None:
         """
-        Initialize sparse (BM25) retrieval with per-chunk timing analysis using incremental approach.
+        Initialize sparse (BM25) retrieval with all documents at once.
+        """
+        if not self.documents:
+            raise ValueError("No documents to index. Call add_documents() first.")
+        
+        self.sparse_retriever = BM25Retriever.from_documents(self.documents, k=5)
+
+    def initialize_dense(self) -> None:
+        """
+        Initialize dense (FAISS) retrieval with all documents at once.
+        """
+        if not self.documents:
+            raise ValueError("No documents to index. Call add_documents() first.")
+        
+        # Load model
+        self.dense_model = HuggingFaceEmbeddings(model_name=self.dense_model_name)
+        
+        # Create FAISS vector store with all documents at once
+        self.dense_retriever = FAISS.from_documents(self.documents, self.dense_model)
+        
+        # Configure GPU if available
+        if self.gpu_available:
+            try:
+                import faiss
+                gpu_index = faiss.index_cpu_to_gpu(faiss.StandardGpuResources(), 0, self.dense_retriever.index)
+                self.dense_retriever.index = gpu_index
+            except Exception:
+                pass  # Silently fail GPU setup
+
+    def analyze_sparse_incremental_cost(self, return_stats: bool = False) -> Optional[Dict]:
+        """
+        Analyze incremental cost of adding documents to sparse (BM25) retrieval.
+        Rebuilds from scratch for each additional document to measure true incremental cost.
         
         Args:
             return_stats (bool): If True, return timing statistics
@@ -100,41 +132,22 @@ class ScipyRetrieverHelper:
             def tqdm(iterable, desc="", total=None):
                 return iterable
         
-        print("Analyzing sparse (BM25) incremental chunk timing...")
-        
         start_time = time.time()
         self.sparse_chunk_times = []
-        current_retriever = None
         
-        for i, doc in enumerate(tqdm(self.documents, desc="Adding chunks to BM25")):
+        for i in tqdm(range(1, len(self.documents) + 1), desc="BM25 Incremental Analysis", unit="docs"):
             chunk_start_time = time.time()
             
-            if current_retriever is None:
-                # First chunk - create new BM25 retriever
-                current_retriever = BM25Retriever.from_documents([doc], k=5)
-            else:
-                # Add current document to existing retriever's document list
-                current_retriever.docs.append(doc)
-                
-                # Rebuild the vectorizer with the updated document list
-                # This simulates the "incremental addition" behavior
-                texts = [d.page_content for d in current_retriever.docs]
-                processed_texts = [current_retriever.preprocess_func(text) for text in texts]
-                
-                # Create new BM25 vectorizer with all documents
-                try:
-                    from rank_bm25 import BM25Okapi
-                    current_retriever.vectorizer = BM25Okapi(processed_texts)
-                except ImportError:
-                    raise ImportError("Please install rank_bm25: pip install rank_bm25")
+            # Rebuild BM25 retriever from scratch with documents 0 to i-1
+            current_docs = self.documents[:i]
+            retriever = BM25Retriever.from_documents(current_docs, k=5)
             
             chunk_time = (time.time() - chunk_start_time) * 1000  # Convert to ms
             self.sparse_chunk_times.append(chunk_time)
         
-        self.sparse_retriever = current_retriever
+        # Keep the final retriever
+        self.sparse_retriever = retriever
         total_time = time.time() - start_time
-        
-        print(f"Sparse analysis complete! {len(self.sparse_chunk_times)} chunk times recorded.")
         
         if return_stats:
             return {
@@ -143,12 +156,14 @@ class ScipyRetrieverHelper:
                 'time_per_document': total_time / len(self.documents),
                 'avg_chunk_time': np.mean(self.sparse_chunk_times),
                 'min_chunk_time': np.min(self.sparse_chunk_times),
-                'max_chunk_time': np.max(self.sparse_chunk_times)
+                'max_chunk_time': np.max(self.sparse_chunk_times),
+                'final_document_count': len(self.documents)
             }
 
-    def initialize_dense(self, return_stats: bool = False) -> Optional[Dict]:
+    def analyze_dense_incremental_cost(self, return_stats: bool = False) -> Optional[Dict]:
         """
-        Initialize dense (FAISS) retrieval with per-chunk timing analysis and GPU support.
+        Analyze incremental cost of adding documents to dense (FAISS) retrieval.
+        Rebuilds from scratch for each additional document to measure true incremental cost.
         
         Args:
             return_stats (bool): If True, return timing statistics
@@ -164,10 +179,6 @@ class ScipyRetrieverHelper:
         except ImportError:
             def tqdm(iterable, desc="", total=None):
                 return iterable
-        
-        print("Analyzing dense (FAISS) incremental chunk timing...")
-        if self.gpu_available:
-            print("GPU acceleration available for FAISS")
         
         start_time = time.time()
         
@@ -177,36 +188,31 @@ class ScipyRetrieverHelper:
         self.model_loading_time = time.time() - model_start_time
         
         self.dense_chunk_times = []
-        vector_store = None
         embedding_start_time = time.time()
         
-        for i, doc in enumerate(tqdm(self.documents, desc="Adding chunks to FAISS")):
+        for i in tqdm(range(1, len(self.documents) + 1), desc="FAISS Incremental Analysis", unit="docs"):
             chunk_start_time = time.time()
             
-            if vector_store is None:
-                # First chunk - create new FAISS index
-                vector_store = FAISS.from_documents([doc], self.dense_model)
-                # Configure GPU if available
-                if self.gpu_available:
-                    try:
-                        import faiss
-                        # Move to GPU if possible
-                        gpu_index = faiss.index_cpu_to_gpu(faiss.StandardGpuResources(), 0, vector_store.index)
-                        vector_store.index = gpu_index
-                    except Exception as e:
-                        print(f"Warning: Could not move FAISS to GPU: {e}")
-            else:
-                # Add chunk to existing index
-                vector_store.add_documents([doc])
+            # Rebuild FAISS vector store from scratch with documents 0 to i-1
+            current_docs = self.documents[:i]
+            vector_store = FAISS.from_documents(current_docs, self.dense_model)
+            
+            # Configure GPU if available
+            if self.gpu_available:
+                try:
+                    import faiss
+                    gpu_index = faiss.index_cpu_to_gpu(faiss.StandardGpuResources(), 0, vector_store.index)
+                    vector_store.index = gpu_index
+                except Exception:
+                    pass  # Silently fail GPU setup
             
             chunk_time = (time.time() - chunk_start_time) * 1000  # Convert to ms
             self.dense_chunk_times.append(chunk_time)
         
-        self.embedding_computation_time = time.time() - embedding_start_time
+        # Keep the final retriever
         self.dense_retriever = vector_store
+        self.embedding_computation_time = time.time() - embedding_start_time
         total_time = time.time() - start_time
-        
-        print(f"Dense analysis complete! {len(self.dense_chunk_times)} chunk times recorded.")
         
         if return_stats:
             return {
@@ -218,7 +224,8 @@ class ScipyRetrieverHelper:
                 'avg_chunk_time': np.mean(self.dense_chunk_times),
                 'min_chunk_time': np.min(self.dense_chunk_times),
                 'max_chunk_time': np.max(self.dense_chunk_times),
-                'gpu_used': self.gpu_available
+                'gpu_used': self.gpu_available,
+                'final_document_count': len(self.documents)
             }
 
     def retrieve_sparse(self, query: str, top_k: int = 5) -> Tuple[List[Document], float]:
@@ -233,7 +240,7 @@ class ScipyRetrieverHelper:
             Tuple[List[Document], float]: Retrieved documents and query time in milliseconds
         """
         if not self.sparse_retriever:
-            raise ValueError("Sparse retriever not initialized. Call initialize_sparse() first.")
+            raise ValueError("Sparse retriever not initialized. Call initialize_sparse() or analyze_sparse_incremental_cost() first.")
         
         start_time = time.time()
         self.sparse_retriever.k = top_k
@@ -254,7 +261,7 @@ class ScipyRetrieverHelper:
             Tuple[List[Document], float]: Retrieved documents and query time in milliseconds
         """
         if not self.dense_retriever:
-            raise ValueError("Dense retriever not initialized. Call initialize_dense() first.")
+            raise ValueError("Dense retriever not initialized. Call initialize_dense() or analyze_dense_incremental_cost() first.")
         
         start_time = time.time()
         retriever = self.dense_retriever.as_retriever(search_kwargs={"k": top_k})
