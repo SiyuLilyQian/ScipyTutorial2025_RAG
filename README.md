@@ -49,11 +49,11 @@ This is your main tutorial notebook with:
 ### Step 2: Explore Specialized Notebooks
 - **Chunking Deep Dive**: `Chunking_Demo.ipynb` - Compare 4 chunking methods
 
-## 📚 Tutorial Dataset: SPIQA Papers
+## 📚 Tutorial Dataset: SPIQA Papers (Adapted Subset)
 
 ### What's Included
-- **90+ Scientific Papers**: Real arXiv papers from computer science and AI research
-- **500+ Q&A Pairs**: Professionally curated questions and answers about the papers
+- **100 Scientific Papers**: Real arXiv papers from computer science and AI research
+- **100 Q&A Pairs**: Professionally curated questions and answers about the papers
 - **Diverse Topics**: Machine learning, computer vision, NLP, and more
 
 ### Dataset Citation
