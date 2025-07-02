@@ -25,7 +25,7 @@ This comprehensive tutorial covers the full RAG pipeline:
 │   ├── Scipy_2025_RAG_start_here.ipynb    # MAIN TUTORIAL - Start Here!
 │   └── Chunking_Demo.ipynb                # Deep dive into chunking strategies
 ├── Data/
-│   ├── selected_files_scipy/        # 100 real scientific papers (arXiv format)
+│   ├── scientific_papers/        # 100 real scientific papers (arXiv format)
 │   └── Scipy_RAG_QA.json            # 100 curated Q&A pairs for testing
 └── README.md                        # This comprehensive guide
 ```
