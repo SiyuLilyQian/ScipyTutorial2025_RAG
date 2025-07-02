@@ -35,6 +35,7 @@ This comprehensive tutorial covers the full RAG pipeline:
 ### Prerequisites
 - Google Colab (recommended) or Jupyter environment
 - GPU access (optional but recommended for speed)
+- HuggingFace Account (optional) 
 
 ### Step 1: Begin Tutorial
 **START HERE:** Open `Demo_Notebooks/Scipy_2025_RAG_start_here.ipynb`
