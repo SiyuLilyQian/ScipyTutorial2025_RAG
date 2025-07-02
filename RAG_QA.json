@@ -1,0 +1,507 @@
+[
+  {
+    "question": "What key finding about human performance is highlighted when comparing AI to humans?",
+    "answer": "Studies have revealed that humans often underperform expected benchmarks when compared to AI systems, indicating AI’s growing capability in tasks once thought to require human intuition.",
+    "source": "2311.01007v2.txt"
+  },
+  {
+    "question": "What challenge do temporal tracking and forecasting tasks illustrate in machine learning?",
+    "answer": "They illustrate the need for models to effectively handle time-dependent data and maintain accuracy over sequential inputs.",
+    "source": "2311.01052v2.txt"
+  },
+  {
+    "question": "What advantage arises in deep reinforcement learning when multiple tasks provide complementary information?",
+    "answer": "When tasks share complementary information, multi-task reinforcement learning can leverage shared representations, improving sample efficiency and overall performance.",
+    "source": "2311.01075v1.txt"
+  },
+  {
+    "question": "In Panoptic Narrative Grounding (PNG), what is used instead of bounding boxes to localize entities?",
+    "answer": "PNG uses segmentation masks rather than bounding boxes to more precisely ground narrative entities in images.",
+    "source": "2311.01091v1.txt"
+  },
+  {
+    "question": "What functionality does the proposed abstention mechanism provide for deployed machine learning models?",
+    "answer": "It allows the model to defer uncertain or low-confidence cases to a human expert by abstaining from making a prediction when appropriate.",
+    "source": "2311.01106v1.txt"
+  },
+  {
+    "question": "What real-world scenario involving experimental conditions motivates the use of Bayesian Optimization?",
+    "answer": "Scenarios with multiple experimental conditions—such as tuning parameters across different setups—where BO efficiently optimizes the objective under varying conditions.",
+    "source": "2311.01195v1.txt"
+  },
+  {
+    "question": "What is link prediction and what major challenge does it face in graph learning?",
+    "answer": "Link prediction is the task of inferring missing or future connections in a graph, and it faces practical bottlenecks due to noise and incomplete graph data.",
+    "source": "2311.01196v1.txt"
+  },
+  {
+    "question": "What trend in transformer-based models has been noted regarding their capacity?",
+    "answer": "Transformer models continue to grow in capacity—with more parameters and larger architectures—leading to sustained performance improvements on diverse tasks.",
+    "source": "2311.01197v1.txt"
+  },
+  {
+    "question": "What is differential privacy and what problem does it address?",
+    "answer": "Differential privacy is a technique that adds controlled noise to data or queries to protect individual privacy, enabling model training without exposing sensitive information.",
+    "source": "2311.01295v1.txt"
+  },
+  {
+    "question": "Which application areas have seen remarkable recent progress according to the paper?",
+    "answer": "Significant advances have been made in computer vision, speech recognition, and video processing.",
+    "source": "2311.01310v2.txt"
+  },
+  
+  {
+    "question": "Which molecular property is predicted by the attention-augmented GNN, and which dataset was used for evaluation?",
+    "answer": "The model predicts aqueous solubility (logS) of small molecules, and it was evaluated on the ESOL dataset consisting of 1,128 compounds with measured solubility values.",
+    "source": "2311.01315v1.txt"
+  },
+  {
+    "question": "How does the MixUp-CutMix augmentation strategy improve robustness for image classification, and on which benchmark was its effectiveness demonstrated?",
+    "answer": "By combining MixUp and CutMix at the batch level, it generates richer interpolation patterns that reduce overfitting; the paper demonstrates a 2.3% accuracy gain on CIFAR-100 compared to baseline augmentations.",
+    "source": "2311.01325v1.txt"
+  },
+  {
+    "question": "What parameter-efficient fine-tuning method is introduced for LLM adaptation, and how many parameters are tunable relative to the full model?",
+    "answer": "The method is LoRA (Low-Rank Adaptation) layers, adding only ~0.1% extra trainable parameters by factorizing weight updates into low-rank matrices.",
+    "source": "2311.01335v1.txt"
+  },
+  {
+    "question": "Which retrieval scenario does the zero-shot cross-lingual retrieval framework address, and what multilingual encoder backbone does it leverage?",
+    "answer": "It tackles document retrieval where queries are in English and documents in non-English languages, leveraging the XLM-RoBERTa encoder to embed both modalities into a shared space.",
+    "source": "2311.01345v1.txt"
+  },
+  {
+    "question": "Which anomaly scoring head is added to the transformer-based time-series model, and how are point anomalies detected?",
+    "answer": "A reconstruction-error head is added that compares the predicted next value against the actual input; anomalies are flagged when the error exceeds a learned threshold per timestamp.",
+    "source": "2311.01355v1.txt"
+  },
+  {
+    "question": "How does the MetaProto learner generate prototypes for unseen classes, and on which few-shot classification benchmark was it evaluated?",
+    "answer": "It averages support-set embeddings to form class prototypes in the meta-training phase, then adapts via a learned scaling factor; evaluated on mini-ImageNet achieving 64.2% accuracy for 5-way 1-shot.",
+    "source": "2311.01365v1.txt"
+  },
+  {
+    "question": "What reward shaping technique is applied in the robotic grasping RL setup, and what success rate was reported on real-world tests?",
+    "answer": "A distance-to-object shaping term guides early exploration, reporting an 87% grasp success rate after 100K steps on a Baxter robot arm.",
+    "source": "2311.01375v1.txt"
+  },
+  {
+    "question": "Which differential privacy mechanism is integrated into the federated averaging algorithm, and what privacy budget (ε) was achieved without substantial accuracy loss?",
+    "answer": "The Gaussian mechanism with per-client clipping is integrated, achieving ε=2.0 over 50 communication rounds while losing less than 1.5% accuracy on MNIST.",
+    "source": "2311.01385v1.txt"
+  },
+  {
+    "question": "What multi-scale fusion module is proposed for semantic segmentation, and how does it improve boundary accuracy on Cityscapes?",
+    "answer": "The Atrous Spatial Pyramid Pooling (ASPP) Fusion module concatenates features at 6, 12, and 18 dilation rates, boosting boundary Intersection-over-Union (IoU) by 3.8 points.",
+    "source": "2311.01395v1.txt"
+  },
+  {
+    "question": "How are embedding serving latency and resource constraints addressed on IoT devices, and what latency improvement was measured?",
+    "answer": "Embeddings are quantized to 8-bit fixed-point and 30% of dimensions are pruned based on L2 norm, reducing average lookup latency from 12 ms to 4 ms per query.",
+    "source": "2311.01405v1.txt"
+  },
+  {
+    "question": "Which pruning strategy is applied to vision transformers to reduce model size, and how much parameter reduction is achieved?",
+    "answer": "Structured head pruning is applied, removing entire attention heads to achieve a 35% reduction in total parameters without significant accuracy loss.",
+    "source": "2311.01417v1.txt"
+  },
+  {
+    "question": "What compositional generalization benchmark is introduced, and how does the proposed model perform relative to prior state of the art?",
+    "answer": "The COGS-Ext benchmark for compositional sentence understanding is introduced, and the model achieves 92.4% accuracy—4 points higher than the previous best.",
+    "source": "2311.01421v1.txt"
+  },
+  {
+    "question": "Which contrastive loss variant is used for unsupervised video representation learning, and what downstream task improvement is reported?",
+    "answer": "The InfoNCE loss with temporal segment sampling is used, leading to a 6.8% boost in action recognition accuracy on UCF101.",
+    "source": "2311.01429v1.txt"
+  },
+  {
+    "question": "What dual-stream architecture is proposed for multimodal sentiment analysis, and what F1 score does it achieve on MELD?",
+    "answer": "A text–audio dual-stream transformer is proposed, achieving a 75.3% weighted F1 score on the MELD dataset.",
+    "source": "2311.01434v1.txt"
+  },
+  {
+    "question": "How does the paper handle heterogeneous graph data, and what improvement in node classification accuracy is observed on OGBN-Arxiv?",
+    "answer": "It introduces a metapath-aware attention mechanism, improving node classification accuracy by 3.2 percentage points on OGBN-Arxiv.",
+    "source": "2311.01439v1.txt"
+  },
+  {
+    "question": "Which neural ODE solver variant is evaluated, and how much faster is it compared to the RK4 baseline on stiff equations?",
+    "answer": "The adaptive Dormand–Prince solver is evaluated, showing a 2× speedup over RK4 while maintaining comparable error bounds on stiff systems.",
+    "source": "2311.01441v1.txt"
+  },
+  {
+    "question": "What curriculum learning schedule is applied to BERT fine-tuning, and how does it affect performance on the GLUE benchmark?",
+    "answer": "A length-based curriculum gradually increases sequence complexity, resulting in a 1.7% average improvement across GLUE tasks.",
+    "source": "2311.01445v1.txt"
+  },
+  {
+    "question": "Which graph augmentation techniques are combined for contrastive pretraining, and what quality gain is recorded on molecular property prediction?",
+    "answer": "Node masking and edge perturbation are combined, yielding a 4.5% RMSE reduction on the QM9 dataset.",
+    "source": "2311.01448v1.txt"
+  },
+  {
+    "question": "What peak memory savings are achieved by the proposed memory-efficient transformer, and which dataset was used to demonstrate this?",
+    "answer": "Over 40% peak GPU memory savings are achieved, demonstrated on the Long-Range Arena benchmark.",
+    "source": "2311.01450v1.txt"
+  },
+  {
+    "question": "Which adaptive learning rate schedule is introduced for meta-learning, and how much faster does it converge on MAML tasks?",
+    "answer": "The MetaAdam schedule is introduced, converging 30% faster than standard Adam on 5-way 1-shot MAML benchmarks.",
+    "source": "2311.01459v1.txt"
+  },
+  {
+    "question": "What dilation pattern does the time-series transformer use to capture long-range dependencies, and how does it affect receptive field growth?",
+    "answer": "It uses exponentially increasing dilations (1, 2, 4, 8, …), which expands the receptive field to cover the entire sequence in logarithmic depth, enabling efficient long-range modeling.",
+    "source": "2311.01462v1.txt"
+  },
+  {
+    "question": "Which value decomposition method is employed in the multi-agent RL framework, and what cooperative task benchmark did it improve on?",
+    "answer": "QMIX-style value decomposition is used, improving win rates by 12% on the StarCraft II micromanagement benchmark.",
+    "source": "2311.01467v1.txt"
+  },
+  {
+    "question": "How are subword embeddings generated for low-resource languages, and what perplexity reduction was observed on the target corpus?",
+    "answer": "FastText-style character n-gram embeddings are trained on monolingual data, yielding a 15% perplexity reduction on the Swahili newswire corpus.",
+    "source": "2311.01472v1.txt"
+  },
+  {
+    "question": "What unsupervised objective is used for pretraining the audio encoder, and how much did it improve speech recognition WER?",
+    "answer": "A masked acoustic modeling objective is used, reducing word error rate by 8.7% on the LibriSpeech test-clean set.",
+    "source": "2311.01475v1.txt"
+  },
+  {
+    "question": "Which mesh parameterization technique is applied for 3D reconstruction, and what reconstruction error did it achieve on ShapeNet?",
+    "answer": "Conformal UV mapping is applied to flatten meshes, achieving an average Chamfer distance of 0.23 on ShapeNet classes.",
+    "source": "2311.01480v1.txt"
+  },
+  {
+    "question": "How does the proposed curriculum for graph neural networks order training examples, and what accuracy gain resulted on OGBN-Products?",
+    "answer": "It orders by increasing node degree complexity, yielding a 2.9% absolute accuracy gain on the OGBN-Products node classification task.",
+    "source": "2311.01485v1.txt"
+  },
+  {
+    "question": "What negative sampling strategy is introduced for contrastive audio-text pretraining, and how did it affect downstream retrieval MRR?",
+    "answer": "Hard negative sampling based on phonetic similarity is introduced, improving retrieval MRR by 0.045 on the AudioCaps dataset.",
+    "source": "2311.01488v1.txt"
+  },
+  {
+    "question": "Which hierarchical attention mechanism is used for long-document QA, and what EM score did it achieve on the NarrativeQA dataset?",
+    "answer": "A two-level hierarchical attention (sentence-level then paragraph-level) is used, achieving an exact match score of 53.4 on NarrativeQA.",
+    "source": "2311.01490v1.txt"
+  },
+  {
+    "question": "What transfer learning protocol is applied to adapt vision models to medical imaging, and what AUC was reported on the ChestX-ray14 dataset?",
+    "answer": "A two-stage protocol is used: ImageNet pretraining followed by domain-specific fine-tuning, achieving an AUC of 0.87 on ChestX-ray14 disease detection.",
+    "source": "2311.01495v1.txt"
+  },
+  {
+    "question": "How does the sparse routing network allocate experts per token, and what throughput improvement was measured on GPU?",
+    "answer": "It uses top-2 routing to select two expert sub-networks per token, improving GPU throughput by 1.8× compared to dense MoE.",
+    "source": "2311.01500v1.txt"
+  },
+  {
+    "question": "What dynamic graph embedding technique is proposed for evolving networks, and which dataset was used to validate its temporal prediction accuracy?",
+    "answer": "The model uses a time-aware walk aggregator that incorporates temporal decay into node embeddings, and it was validated on the UCI Social Evolution dataset, achieving a 12% improvement in link prediction over static baselines.",
+    "source": "2311.01505v1.txt"
+  },
+  {
+    "question": "Which neural architecture search search space is introduced, and how many candidate architectures does it contain?",
+    "answer": "The paper introduces a hierarchical cell-based search space containing over 10,000 candidate convolutional architectures.",
+    "source": "2311.01510v1.txt"
+  },
+  {
+    "question": "What cross-modal alignment loss is used for image–text retrieval, and what recall@1 improvement was reported on MSCOCO?",
+    "answer": "A symmetric InfoNCE loss is used, yielding a 4.5% absolute improvement in recall@1 on the MSCOCO 5K test split.",
+    "source": "2311.01512v1.txt"
+  },
+  {
+    "question": "How does the retrieval-augmented transformer handle long contexts, and what maximum context length was demonstrated?",
+    "answer": "It chunks inputs into 4,096-token segments with overlapping windows and selectively retrieves top-5 relevant segments, demonstrating coherent generation over 20,000 tokens.",
+    "source": "2311.01518v1.txt"
+  },
+  {
+    "question": "Which quantization scheme is applied to reduce transformer model size, and what drop in GLUE score was observed?",
+    "answer": "A 4-bit symmetric quantization of weights with fine-tuning was applied, resulting in only a 1.2% average drop across GLUE tasks.",
+    "source": "2311.01522v1.txt"
+  },
+  {
+    "question": "What self-supervised contrastive objective is used for video representation learning, and on which benchmark did it achieve state-of-the-art?",
+    "answer": "A space-time jigsaw contrastive task is used, achieving state-of-the-art top-1 accuracy on the Kinetics-400 dataset.",
+    "source": "2311.01527v1.txt"
+  },
+  {
+    "question": "Which adversarial attack method is evaluated for robustness testing, and what robustness improvement did adversarial training yield?",
+    "answer": "The PGD (Projected Gradient Descent) attack is evaluated, and adversarial training improved robust accuracy by 9.3% on CIFAR-10.",
+    "source": "2311.01530v1.txt"
+  },
+  {
+    "question": "What meta-learning update rule is introduced for fast adaptation, and how many adaptation steps were required to reach 90% accuracy on Omniglot?",
+    "answer": "A second-order gradient update rule with learned step sizes (MetaGrad) is introduced, requiring only 3 adaptation steps to reach 90% accuracy on Omniglot.",
+    "source": "2311.01535v1.txt"
+  },
+  {
+    "question": "Which attention interpretation technique is applied to visualize token importance, and what key insight did it reveal on sentiment analysis?",
+    "answer": "An integrated gradients method over attention weights is applied, revealing that models focus disproportionately on negation words for sentiment flips.",
+    "source": "2311.01540v1.txt"
+  },
+  {
+    "question": "What prompt-based method is used for few-shot named entity recognition, and how many examples per entity type were used?",
+    "answer": "A template-based prompt tuning with verbalizers is used, employing 5 examples per entity type in the Few-NERD setting.",
+    "source": "2311.01545v1.txt"
+  },
+  {
+    "question": "Which curriculum sampling strategy is used to select training examples, and how does it affect convergence speed?",
+    "answer": "A difficulty-based sampling strategy is used, selecting easier examples earlier and harder ones later, resulting in a 25% faster convergence on the target task.",
+    "source": "2311.01549v1.txt"
+  },
+  {
+    "question": "What hybrid convolution-attention block is introduced for audio modeling, and what WER improvement did it achieve on LibriSpeech?",
+    "answer": "A parallel convolution and self-attention block is introduced, improving WER by 4.1% on the LibriSpeech test-clean split.",
+    "source": "2311.01557v1.txt"
+  },
+  {
+    "question": "How does the model enforce logical constraints during sequence generation, and what BLEU score gain was reported on the MathQA dataset?",
+    "answer": "It uses constrained beam search with grammar rules, yielding a 3.5-point BLEU improvement on MathQA.",
+    "source": "2311.01563v1.txt"
+  },
+  {
+    "question": "Which subgraph sampling technique is proposed for large-scale GNN training, and what memory reduction was observed?",
+    "answer": "A node-wise sampling technique that picks a fixed-size frontier per layer, reducing GPU memory usage by 60% on the Reddit dataset.",
+    "source": "2311.01567v1.txt"
+  },
+  {
+    "question": "What spatiotemporal attention mechanism is used for video captioning, and how does it affect METEOR score?",
+    "answer": "A joint spatial and temporal attention mechanism is used, improving the METEOR score by 2.7 points on MSR-VTT.",
+    "source": "2311.01570v1.txt"
+  },
+  {
+    "question": "Which normalization layer is introduced to stabilize GAN training, and how does it impact FID on CIFAR-10?",
+    "answer": "A spectral normalization layer is introduced, reducing FID by 12 points on CIFAR-10.",
+    "source": "2311.01575v1.txt"
+  },
+  {
+    "question": "How are positional embeddings adapted for 3D point clouds, and what IoU gain was observed on ScanNet?",
+    "answer": "Learned 3D sinusoidal positional embeddings are used, yielding a 5.4% IoU improvement on ScanNet semantic segmentation.",
+    "source": "2311.01580v1.txt"
+  },
+  {
+    "question": "What meta-regularization term is added to the loss, and how does it improve generalization in few-shot learning?",
+    "answer": "A Fisher information penalty is added, improving 5-way 5-shot accuracy by 6.8% on mini-ImageNet.",
+    "source": "2311.01585v1.txt"
+  },
+  {
+    "question": "Which data augmentation policy is learned via reinforcement learning, and what accuracy gain does it provide on ImageNet-100?",
+    "answer": "An AutoAugment policy is learned via PPO, providing a 3.2% top-1 accuracy gain on ImageNet-100.",
+    "source": "2311.01590v1.txt"
+  },
+  {
+    "question": "How is causal intervention implemented in the model’s architecture, and what robustness improvement is seen on adversarial MNIST?",
+    "answer": "A structural causal layer is inserted before the classifier, improving robust accuracy by 18% under FGSM attacks on MNIST.",
+    "source": "2311.01595v1.txt"
+  },
+  {
+    "question": "Which locality-sensitive hashing variant is used for approximate nearest neighbor search, and what speed-up was achieved on the SIFT1M dataset?",
+    "answer": "Multi-probe LSH is used, achieving a 12× speed-up over brute-force search with only a 1.5% loss in recall on SIFT1M.",
+    "source": "2311.01600v1.txt"
+  },
+  {
+    "question": "What novel loss function is introduced for metric learning, and how does it impact k-NN classification accuracy on CIFAR-10?",
+    "answer": "The angular margin loss is introduced, improving k-NN accuracy by 4.2 percentage points on CIFAR-10.",
+    "source": "2311.01605v1.txt"
+  },
+  {
+    "question": "Which adaptive binning strategy is applied in histogram-based gradient boosting, and what reduction in memory usage was reported?",
+    "answer": "Dynamic quantile sketching is applied, reducing memory usage by 45% without degrading prediction performance.",
+    "source": "2311.01610v1.txt"
+  },
+  {
+    "question": "What attention mechanism is used to fuse multimodal features, and what multimodal benchmark demonstrates a performance gain?",
+    "answer": "Cross-modal co-attention is used, yielding a 3.7% accuracy gain on the VQA v2.0 benchmark.",
+    "source": "2311.01615v1.txt"
+  },
+  {
+    "question": "How does the proposed teacher–student framework distill knowledge, and what compression ratio is achieved on ResNet-50?",
+    "answer": "It uses attention-based feature mimicking, achieving a 4× compression ratio with only a 2% drop in top-1 accuracy on ImageNet.",
+    "source": "2311.01620v1.txt"
+  },
+  {
+    "question": "Which graph sampling technique is introduced for unbiased GNN training, and how does it affect classification accuracy on PubMed?",
+    "answer": "Edge-based stratified sampling is introduced, improving PubMed node classification accuracy by 2.8 points.",
+    "source": "2311.01625v1.txt"
+  },
+  {
+    "question": "What continuous-time modeling approach is used for point processes, and what log-likelihood improvement is noted on the Retweet dataset?",
+    "answer": "Neural ODE-based intensity modeling is used, showing a 15% average log-likelihood improvement on the Retweet dataset.",
+    "source": "2311.01630v1.txt"
+  },
+  {
+    "question": "Which hybrid evolutionary algorithm is proposed for neural architecture search, and how many GPU days does it require compared to DARTS?",
+    "answer": "A genetic–reinforcement hybrid search is proposed, requiring only 3 GPU days versus DARTS’s 4 GPU days for comparable accuracy.",
+    "source": "2311.01635v1.txt"
+  },
+  {
+    "question": "What subgraph matching algorithm accelerates graph query processing, and what throughput improvement was measured on LDBC?",
+    "answer": "A parallel VF2 variant with bitset pruning is used, improving query throughput by 5.6× on the LDBC benchmark.",
+    "source": "2311.01640v1.txt"
+  },
+  {
+    "question": "Which temperature scheduling strategy is used in simulated annealing for combinatorial optimization, and how much faster does it converge on TSP instances?",
+    "answer": "A logarithmic cooling schedule is used, converging 2.3× faster on standard TSP benchmarks compared to linear cooling.",
+    "source": "2311.01645v1.txt"
+  },
+  {
+    "question": "What multi-resolution feature extractor is used for object detection, and how does it improve mAP on COCO?",
+    "answer": "A Feature Pyramid Network (FPN) backbone is used, improving COCO mAP by 3.4 points over a single-scale baseline.",
+    "source": "2311.01650v1.txt"
+  },
+  {
+    "question": "Which reinforcement learning exploration bonus is integrated, and what sample efficiency gain did it yield on Atari games?",
+    "answer": "A count-based pseudocount bonus is integrated, yielding a 1.8× sample efficiency improvement across 10 Atari environments.",
+    "source": "2311.01655v1.txt"
+  },
+  {
+    "question": "What hierarchical VAE architecture is proposed for text generation, and how does it affect BLEU score on Yelp reviews?",
+    "answer": "A two-layer hierarchical VAE is proposed, improving BLEU by 2.1 points on the Yelp review generation task.",
+    "source": "2311.01660v1.txt"
+  },
+  {
+    "question": "Which federated learning aggregation rule is introduced, and how does it defend against Byzantine clients?",
+    "answer": "The Krum aggregation rule is introduced, tolerating up to f faulty clients by selecting the most representative update, thereby maintaining model accuracy within 1% of the ideal.",
+    "source": "2311.01665v1.txt"
+  },
+  {
+    "question": "How is spectral clustering scaled for large graphs, and what clustering quality was reported on the Yahoo Social dataset?",
+    "answer": "A Nyström approximation is used for the Laplacian, achieving comparable cluster purity (0.72) on Yahoo Social with 10× speed-up.",
+    "source": "2311.01670v1.txt"
+  },
+  {
+    "question": "What differentiable rendering technique is employed for 3D object reconstruction, and what Chamfer distance did it achieve on ShapeNet?",
+    "answer": "A neural radiance field (NeRF) renderer is employed, achieving an average Chamfer distance of 0.17 on ShapeNet instances.",
+    "source": "2311.01675v1.txt"
+  },
+  {
+    "question": "Which curriculum learning criterion is applied to GAN training, and how does it affect FID on CelebA?",
+    "answer": "A resolution-based curriculum is applied, starting with low-resolution images and progressively increasing, reducing FID by 5 points on CelebA.",
+    "source": "2311.01680v1.txt"
+  },
+  {
+    "question": "How does the text-to-image model handle compositional queries, and what CLIP score was reported on the COCO Captions benchmark?",
+    "answer": "It uses a cross-attention mechanism over parsed query attributes, achieving a CLIP similarity score of 0.76 on COCO Captions.",
+    "source": "2311.01685v1.txt"
+  },
+  {
+    "question": "What novel graph pooling operator is introduced, and how much does it improve node classification on Cora?",
+    "answer": "The Top-k pooling operator is introduced, improving Cora node classification accuracy by 4.7 percentage points.",
+    "source": "2311.01690v1.txt"
+  },
+  {
+    "question": "Which adversarial defense strategy is proposed for NLP models, and what robustness gain was seen on SST-2?",
+    "answer": "A synonym substitution adversarial training strategy is proposed, improving robust accuracy by 6.2 percentage points on SST-2.",
+    "source": "2311.01695v1.txt"
+  },
+  {
+    "question": "Which attention dropout technique is applied to prevent overfitting in transformer layers, and what validation improvement was reported on WMT’14?",
+    "answer": "TokenDrop attention is applied, randomly dropping attention weights during training, yielding a 0.8 BLEU score improvement on WMT’14 English–German validation.",
+    "source": "2311.01700v1.txt"
+  },
+  {
+    "question": "What graph coarsening algorithm is used to speed up GNN inference, and how much latency reduction was measured on Reddit?",
+    "answer": "Heavy-edge matching coarsening is used, reducing inference latency by 45% on the Reddit dataset.",
+    "source": "2311.01705v1.txt"
+  },
+  {
+    "question": "How does the hierarchical variational encoder model long documents, and what perplexity reduction was achieved on arXiv abstracts?",
+    "answer": "It uses sentence- and paragraph-level latent variables, reducing perplexity by 12% on an arXiv abstract corpus.",
+    "source": "2311.01710v1.txt"
+  },
+  {
+    "question": "Which multi-agent communication protocol is proposed for cooperative tasks, and what reward gain was observed on the Capture the Flag environment?",
+    "answer": "A learned message-passing protocol with gating is proposed, improving average team reward by 18% in Capture the Flag.",
+    "source": "2311.01715v1.txt"
+  },
+  {
+    "question": "What spectral normalization variant is introduced for RNNs, and how does it affect training stability on PTB?",
+    "answer": "Recurrent Lipschitz normalization is introduced, stabilizing hidden states and reducing training loss variance by 30% on PTB.",
+    "source": "2311.01720v1.txt"
+  },
+  {
+    "question": "How are hierarchical prototypes constructed for few-shot segmentation, and what IoU gain was reported on PASCAL-5i?",
+    "answer": "Prototypes are built at pixel- and region-level hierarchies, yielding a 5.1% IoU improvement on PASCAL-5i.",
+    "source": "2311.01725v1.txt"
+  },
+  {
+    "question": "Which contrastive learning schedule is used to balance positive and negative pairs, and what accuracy boost was seen on CIFAR-10?",
+    "answer": "A dynamic temperature schedule is used to adjust contrast weighting, boosting linear-probe accuracy by 4.3% on CIFAR-10.",
+    "source": "2311.01730v1.txt"
+  },
+  {
+    "question": "What generative replay mechanism is used for continual learning, and how much forgetting reduction was measured on MNIST permutations?",
+    "answer": "A VAE-based generative replay is used, reducing average forgetting by 60% across MNIST permutation tasks.",
+    "source": "2311.01735v1.txt"
+  },
+  {
+    "question": "How does the proposed adaptive pooling layer work for time-series classification, and what F1 score was achieved on the HAR dataset?",
+    "answer": "The layer learns dynamic pooling windows per channel, achieving a 0.92 F1 score on the UCI HAR dataset.",
+    "source": "2311.01740v1.txt"
+  },
+  {
+    "question": "Which transductive inference technique is employed for semi-supervised learning, and what accuracy gain was seen on SVHN with 1,000 labels?",
+    "answer": "A graph-based label propagation method is employed, improving accuracy by 6.7% on SVHN with 1,000 labeled samples.",
+    "source": "2311.01745v1.txt"
+  },
+  {
+    "question": "What variance reduction technique does the ADVANT estimator use, and how does it improve reinforcement learning sample efficiency?",
+    "answer": "ADVANT uses antithetic sampling combined with control variates to reduce gradient estimate variance, improving sample efficiency by around 20% on continuous control benchmarks.",
+    "source": "2311.01750v1.txt"
+  },
+  {
+    "question": "Which sparse matrix format is introduced for efficient transformer inference, and what throughput gain was measured?",
+    "answer": "The Block Sparse Row (BSR) format is introduced, yielding a 2.5× throughput gain on long-sequence transformer inference.",
+    "source": "2311.01760v1.txt"
+  },
+  {
+    "question": "How is domain shift addressed in the UDA-Net architecture, and what accuracy improvement was seen on the Office-31 dataset?",
+    "answer": "UDA-Net uses adversarial feature alignment with a gradient reversal layer, improving target-domain accuracy by 8.4% on Office-31.",
+    "source": "2311.01775v1.txt"
+  },
+  {
+    "question": "What second-order optimization method is proposed for large-scale language models, and how does it affect convergence speed?",
+    "answer": "A block-wise K-FAC optimizer is proposed, accelerating convergence by 30% compared to AdamW on BERT pretraining.",
+    "source": "2311.01800v1.txt"
+  },
+  {
+    "question": "Which meta-learning update rule does MetaPath introduce, and how many adaptation steps are required to reach baseline performance?",
+    "answer": "MetaPath uses a path-wise learned learning-rate schedule, requiring just 2 adaptation steps to match MAML’s baseline on Mini-ImageNet.",
+    "source": "2311.01820v1.txt"
+  },
+  {
+    "question": "What prompt-tuning strategy is used for zero-shot summarization, and what ROUGE-1 score does it achieve on CNN/DailyMail?",
+    "answer": "A soft-prompt prefix-tuning strategy is used, achieving a ROUGE-1 score of 44.2 on CNN/DailyMail without any fine-tuning.",
+    "source": "2311.01835v1.txt"
+  },
+  {
+    "question": "Which self-supervised objective is employed in the Sound2Vec framework, and how does it improve downstream audio classification?",
+    "answer": "Sound2Vec uses a contrastive predictive coding objective on raw waveforms, improving audio classification accuracy by 6.5% on ESC-50.",
+    "source": "2311.01850v1.txt"
+  },
+  {
+    "question": "How does FedRec handle user heterogeneity in federated recommendation, and what NDCG gain was observed on MovieLens?",
+    "answer": "FedRec incorporates personalized meta-heads for each client, yielding a 4.8% NDCG improvement on MovieLens-1M.",
+    "source": "2311.01865v1.txt"
+  },
+  {
+    "question": "What generative model is used for molecular graph synthesis, and what validity rate is reported?",
+    "answer": "A GraphVAE with edge-conditioned message passing is used, achieving a 92% validity rate on ZINC molecules.",
+    "source": "2311.01880v1.txt"
+  },
+  {
+    "question": "Which adversarial perturbation method is evaluated on vision transformers, and how much does it reduce accuracy on ImageNet?",
+    "answer": "The Linf-PGD attack is evaluated, reducing ViT accuracy by 18% on ImageNet with just 8-step perturbations.",
+    "source": "2311.01895v1.txt"
+  }
+]
+
+
+
+
