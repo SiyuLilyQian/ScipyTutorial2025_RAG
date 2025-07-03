@@ -1,0 +1,51 @@
+,Fixed Length,Recursive ,Semantic,Semantic with Sized Controlled
+Chunk 1,"# Introduction
+Welcome to our demo on text chunking! This section introduces chunking methods and explains why splitting long documents into smaller pieces is critical for efficient retrieval and gene",# Introduction,"# Introduction
+Welcome to our demo on text chunking! This section introduces chunking methods and explains why splitting long documents into smaller pieces is critical for efficient retrieval and generation. ## What is Chunking? Chunking is the process of dividing text into manageable segments. - Character-based chunking splits purely by length. - Recursive chunking uses natural text breaks, like paragraphs or sentences. - Semantic chunking finds topic changes.","# Introduction
+Welcome to our demo on text chunking!"
+Chunk 2,"ration.
+
+## What is Chunking?
+Chunking is the process of dividing text into manageable segments.
+- Character-based chunking splits purely by length.
+- Recursive chunking uses natural text breaks, like",Welcome to our demo on text chunking! This section introduces chunking methods and explains why splitting long documents into smaller pieces is critical for efficient retrieval and generation.,"Here is a list:
+1.","This section introduces chunking methods and explains why splitting long documents into smaller pieces is critical for efficient retrieval and generation. ## What is Chunking? Chunking is the process of dividing text into manageable segments. - Character-based chunking splits purely by length. - Recursive chunking uses natural text breaks, like paragraphs or sentences. - Semantic chunking finds topic changes. Here is a list:
+1. Fast and easy: character-based. 2. Natural: recursive or markdown-based. 3. Context-aware: semantic."
+Chunk 3,"paragraphs or sentences.
+- Semantic chunking finds topic changes.
+
+Here is a list:
+1. Fast and easy: character-based.
+2. Natural: recursive or markdown-based.
+3. Context-aware: semantic.
+
+## An Examp","## What is Chunking?
+Chunking is the process of dividing text into manageable segments.
+- Character-based chunking splits purely by length.",Fast and easy: character-based.,"## An Example with a Superlongword
+Sometimes, data includes strange artifacts like:
+ThisIsASingleUnbreakableSupercalifragilisticexpialidociousWordThatExceedsTheChunkSizeLimitAndCausesTroubleForSplitters."
+Chunk 4,"le with a Superlongword
+Sometimes, data includes strange artifacts like:
+ThisIsASingleUnbreakableSupercalifragilisticexpialidociousWordThatExceedsTheChunkSizeLimitAndCausesTroubleForSplitters.
+
+## Top","- Recursive chunking uses natural text breaks, like paragraphs or sentences.
+- Semantic chunking finds topic changes.",2. Natural: recursive or markdown-based. 3.,"## Topic Change: Semantic Matters
+Chunkers that consider **meaning** will split here, as the topic shifts from chunking methods to why semantics matter."
+Chunk 5,"ic Change: Semantic Matters
+Chunkers that consider **meaning** will split here, as the topic shifts from chunking methods to why semantics matter.
+Semantic chunking is especially useful when there are","Here is a list:
+1. Fast and easy: character-based.
+2. Natural: recursive or markdown-based.
+3. Context-aware: semantic.",Context-aware: semantic.,"Semantic chunking is especially useful when there are clear boundaries in ideas or narrative flow, even if there's no line break or heading. In summary, choose your chunker based on your data and task!"
+Chunk 6,"clear boundaries in ideas or narrative flow, even if there's no line break or heading.
+
+In summary, choose your chunker based on your data and task!","## An Example with a Superlongword
+Sometimes, data includes strange artifacts like:","## An Example with a Superlongword
+Sometimes, data includes strange artifacts like:
+ThisIsASingleUnbreakableSupercalifragilisticexpialidociousWordThatExceedsTheChunkSizeLimitAndCausesTroubleForSplitters. ## Topic Change: Semantic Matters
+Chunkers that consider **meaning** will split here, as the topic shifts from chunking methods to why semantics matter. Semantic chunking is especially useful when there are clear boundaries in ideas or narrative flow, even if there's no line break or heading. In summary, choose your chunker based on your data and task!",
+Chunk 7,,ThisIsASingleUnbreakableSupercalifragilisticexpialidociousWordThatExceedsTheChunkSizeLimitAndCausesTroubleForSplitters.,,
+Chunk 8,,"## Topic Change: Semantic Matters
+Chunkers that consider **meaning** will split here, as the topic shifts from chunking methods to why semantics matter.",,
+Chunk 9,,"Semantic chunking is especially useful when there are clear boundaries in ideas or narrative flow, even if there's no line break or heading.",,
+Chunk 10,,"In summary, choose your chunker based on your data and task!",,

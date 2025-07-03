@@ -1,4 +1,3 @@
-from langchain_community.document_loaders import PyPDFLoader
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_experimental.text_splitter import SemanticChunker
@@ -11,7 +10,6 @@ from langchain.text_splitter import (
 )
 import os
 import nltk
-import pypdf
 from nltk import sent_tokenize
 nltk.download("punkt", quiet=True)
 nltk.download("punkt_tab", quiet=True)
