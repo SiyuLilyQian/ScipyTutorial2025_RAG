@@ -26,7 +26,7 @@ This comprehensive tutorial covers the full RAG pipeline:
 │   └── Chunking_Demo.ipynb                # Deep dive into chunking strategies
 ├── Data/
 │   ├── scientific_papers/        # 100 real scientific papers (arXiv format)
-│   └── Scipy_RAG_QA.json            # 100 curated Q&A pairs for testing
+│   └── Scipy_RAG_QA.json            # 60 curated Q&A pairs for testing
 └── README.md                        # This comprehensive guide
 ```
 
@@ -54,7 +54,7 @@ This is your main tutorial notebook with:
 
 ### What's Included
 - **100 Scientific Papers**: Real arXiv papers from computer science and AI research
-- **100 Q&A Pairs**: Professionally curated questions and answers about the papers
+- **60 Q&A Pairs**: Professionally curated questions and answers about the papers
 - **Diverse Topics**: Machine learning, computer vision, NLP, and more
 
 ### Dataset Citation
