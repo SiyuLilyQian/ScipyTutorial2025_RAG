@@ -1,0 +1,302 @@
+[
+  {
+    "question":"What is one of the promises of AI?",
+    "answer":"One of the promises of AI is to enhance human performance and efficiency by providing fast and accurate solutions.",
+    "source":"2311.01007v2.txt"
+  },
+  {
+    "question":"What is Sound source localization (SSL)?",
+    "answer":"Sound source localization (SSL) is the task of predicting the successive angular positions of audio sourcesfrom a multichannel input audio clip \ud835\udc99\u2208\ud835\udcb3\ud835\udc99\ud835\udcb3\\boldsymbol{x}\\in\\mathcal{X} [15].",
+    "source":"2311.01052v2.txt"
+  },
+  {
+    "question":"What is Markov Decision Process (MDP)?",
+    "answer":"Markov Decision Process (MDP) is defined by a tuple (S,A,P,R,\u03b3)\ud835\udc46\ud835\udc34\ud835\udc43\ud835\udc45\ud835\udefe(S,A,P,R,\\gamma) where S\ud835\udc46S is a finite set of states, A\ud835\udc34A is a finite set of actions, transition function P\u200b(s\u2032|s,a)\ud835\udc43conditionalsuperscript\ud835\udc60\u2032\ud835\udc60\ud835\udc4eP(s^{\\prime}|s,a) is atransition probability from state s\ud835\udc60s to state s\u2032superscript\ud835\udc60\u2032s^{\\prime} after action a isexecuted, reward function R\u200b(s,a)\ud835\udc45\ud835\udc60\ud835\udc4eR(s,a) is the immediate reward obtained after action a\ud835\udc4ea is performed, and discount factor \u03b3\u2208(0,1)\ud835\udefe01\\gamma\\in(0,1).",
+    "source":"2311.01075v1.txt"
+  },
+  {
+    "question":"What is one of the essential components of PNG methods?",
+    "answer":"Considering the multimodal nature of the PNG task, one of the essential components of PNG methods is the visual-linguistic interaction between image and caption.",
+    "source":"2311.01091v1.txt"
+  },
+  {
+    "question":"How to enable a safer and more accurate system, one solution?",
+    "answer":"To enable a safer and more accurate system, one solution is to allow the model to defer to a downstream human expert when necessary.",
+    "source":"2311.01106v1.txt"
+  },
+  {
+    "question":"What is attribution?",
+    "answer":"The attribution is thatdifferent from the label noise,the edge noise here is bilateral:it can naturally deteriorate both the input graph topology and the target edge labels,as illustrated in Fig.",
+    "source":"2311.01196v1.txt"
+  },
+  {
+    "question":"What is one of the primary strategies for improving the efficiency of Vision Transformers (ViTs)?",
+    "answer":"One of the primary strategies for improving the efficiency of Vision Transformers (ViTs) is to reduce the complexity of the self-attention operation.",
+    "source":"2311.01197v1.txt"
+  },
+  {
+    "question":"What is the shortcomings of training models with DP?",
+    "answer":"However, training models with DP often incur significant performance degradation, especially when strong privacy guarantees are required or the amount of training data available is limited.",
+    "source":"2311.01295v1.txt"
+  },
+  {
+    "question":"What is one challenge faced by vision transformers?",
+    "answer":"However, one challenge faced by vision transformers is the increasing computational complexity of the self-attention module as the sequence length or image resolution grows.",
+    "source":"2311.01310v2.txt"
+  },
+  {
+    "question":"What is  necessary  when end-users deploy these models in diverse domains?",
+    "answer":"In practice, when end-users deploy these models in diverse domains, adaptation is often necessary to achieve high accuracy.",
+    "source":"2311.01420v1.txt"
+  },
+  {
+    "question":"What is Knowledge Distillation (KD)?",
+    "answer":"Knowledge Distillation (KD) is a technique for training a student model with guidance from a stronger teacher model, widely applied in vision and language tasks [6, 32, 56, 72].",
+    "source":"2311.01441v1.txt"
+  },
+  {
+    "question":"What is Clustering?",
+    "answer":"Clustering is one of the main research directions in data mining tasks.",
+    "source":"2311.01840v1.txt"
+  },
+  {
+    "question":"What is the proof of this theorem (and the subsequent theorems in this section)?",
+    "answer":"The proof of this theorem (and the subsequent theorems in this section) is based on the construction of a suitable Lyapunov function for the corresponding ODE (\\textit{e.",
+    "source":"2311.02002v1.txt"
+  },
+  {
+    "question":"What is Active interaction with the environment?",
+    "answer":"Active interaction with the environment is fundamental to human understanding of the world around us.",
+    "source":"2311.02018v1.txt"
+  },
+  {
+    "question":"What is Reliable segmentation of safety-critical scene?",
+    "answer":"Reliable segmentation of safety-critical scene is an important task for a variety of real-world scenarios such as autonomous driving\u00a0[2, 3, 7, 40] and medical applications\u00a0[19, 27, 29, 43].",
+    "source":"2311.02719v1.txt"
+  },
+  {
+    "question":"What is one fundamental component for building many applications in machine learning?",
+    "answer":"One fundamental component for building many applications in machine learning is a correctly estimated density for prediction andestimation tasks, with examples ranging from classification [1, 2], anomaly detection [3], and clustering[4] to the generalization of value functions [5], policy evaluation [6],and estimation of various information-theoretic measures [7, 8, 9].",
+    "source":"2311.03001v1.txt"
+  },
+  {
+    "question":"What is an effective learning scheme?",
+    "answer":"In the literature, an effective learning scheme is to conduct model regularization with OOD data, making predictors achieve low-confidence predictions on such data\u00a0[3, 16, 36, 42, 49, 75, 79].",
+    "source":"2311.03236v1.txt"
+  },
+  {
+    "question":"What is The ability to communicate with others?",
+    "answer":"The ability to communicate with others is a ubiquitous, everyday function.",
+    "source":"2311.03611v1.txt"
+  },
+  {
+    "question":"What is the process described by Equation (17)?",
+    "answer":"It is demonstrated that the process described by Equation (17) is a discrete equivalent of the heat diffusion process (14) [9].",
+    "source":"2311.03886v1.txt"
+  },
+  {
+    "question":"What is The sequential likelihood ratio process (LRP) in (1)?",
+    "answer":"The sequential likelihood ratio process (LRP) in (1) is a statistic that compares the likelihood of a given model parameter, with the performance of an adaptively chosen estimator sequence.",
+    "source":"2311.04402v1.txt"
+  },
+  {
+    "question":"What is The outer recursion (outer RvNN)?",
+    "answer":"The outer recursion (outer RvNN) is the BKT-RvNN setup as discussed.",
+    "source":"2311.04449v1.txt"
+  },
+  {
+    "question":"What is Estimating correspondences between deformable shapes?",
+    "answer":"Estimating correspondences between deformable shapes is a fundamental task in computer vision and graphics, with a significant impact on an array of applications including robotic vision [50], animation\u00a0[40], 3D reconstruction\u00a0[58], to name a few.",
+    "source":"2311.04494v1.txt"
+  },
+  {
+    "question":"What is Pre-training?",
+    "answer":"Pre-training is a fundamental task in deep learning, serving as a powerful tool to harness the potential of copious unlabeled data and enhance the results of downstream tasks.",
+    "source":"2311.04501v1.txt"
+  },
+  {
+    "question":"In machine learning, what does learned model from training data do?",
+    "answer":"In machine learning, the learned model from training data is expected to make predictions on unknown test data as accurately as possible.",
+    "source":"2311.04550v1.txt"
+  },
+  {
+    "question":"Why learning to disentangle the explanatory factors of the observed data is valuable?",
+    "answer":"Learning to disentangle the explanatory factors of the observed data is valuable for a variety of machine learning (ML) applications, as it allows for a more compact, interpretable, and manipulable data representation.",
+    "source":"2311.04774v1.txt"
+  },
+  {
+    "question":"How is designing large models by NAS?",
+    "answer":"However, designing large models by NAS is challenging due to the dramatical increase of search space and the associated huge performance evaluation cost 10 ; 13.",
+    "source":"2311.04943v2.txt"
+  },
+  {
+    "question":"What is The goal of Audio-visual segmentation (AVS)?",
+    "answer":"The goal of Audio-visual segmentation (AVS) is to output a pixel-level map of the object(s) that produce sound at the image frame.",
+    "source":"2311.05152v1.txt"
+  },
+  {
+    "question":"How is large scale 2D image data compared to 3D?",
+    "answer":"Large scale 2D image data is much more readily available compared to 3D or multi-view data.",
+    "source":"2311.05230v1.txt"
+  },
+  {
+    "question":"What is First-Layer Lasso (1L Lasso)?",
+    "answer":"First-Layer Lasso (1L Lasso) is an extension of Lasso for MLPs with multiple layers.",
+    "source":"2311.05877v1.txt"
+  },
+  {
+    "question":"What is FL?",
+    "answer":"FL is a collaborative distributed framework where multiple clients jointly train the model with their private datasets [27, 28].",
+    "source":"2311.05924v1.txt"
+  },
+  {
+    "question":"What is A Bayesian network?",
+    "answer":"A Bayesian network is a prominent class of probabilistic graphical models that encodes the conditional dependencies among variables with a directed acyclic graph (DAG).",
+    "source":"2311.06117v1.txt"
+  },
+  {
+    "question":"What is Topological data analysis (TDA)?",
+    "answer":"Topological data analysis (TDA) is a rapidly growing field that provides tools from algebraic topology for uncovering the shape (or structure) of data, allowing for efficient feature extraction.",
+    "source":"2311.06152v1.txt"
+  },
+  {
+    "question":"Does the practice of fine-tuning always outperform?",
+    "answer":"The practice of fine-tuning, unfortunately but unsurprisingly, is not always outperforming; the notorious problem of negative transfer\u00a0[9, 53] arises especially when downstream tasks are out of the distribution of pre-training data.",
+    "source":"2311.06868v1.txt"
+  },
+  {
+    "question":"What is MSVD?",
+    "answer":"MSVD (Chen and Dolan, 2011) (Microsoft Research Video Description Corpus) is a classical dataset of one-sentence descriptions for short videos(under 10 seconds).",
+    "source":"2311.08143v1.txt"
+  },
+  {
+    "question":"What is the most widely used algorithm for training deep neural networks with DP guarantees?",
+    "answer":"For training deep neural networks with DP guarantees, the most widely used algorithm is DP-SGD\u00a0[1].",
+    "source":"2311.08357v1.txt"
+  },
+  {
+    "question":"What is Traffic congestion?",
+    "answer":"Traffic congestion is one of the most serious problems in urban management, which is associated with more than 60\\% world-wide traffic accidents~\\cite{jain2012road}.",
+    "source":"2311.08635v1.txt"
+  },
+  {
+    "question":"What is the objective of dataset distillation?",
+    "answer":"Specifically, the objective of dataset distillation is to synthesize a dataset with a smaller cardinality that can preserve the performance of original large-sized datasets in machine learning tasks.",
+    "source":"2311.08819v1.txt"
+  },
+  {
+    "question":"What is Average Precision (mAP)?",
+    "answer":"Average Precision (mAP) is adopted for evaluation.",
+    "source":"2311.09817v1.txt"
+  },
+  {
+    "question":"What is necessary to learn long-term dependencies in the data?",
+    "answer":"In a traditional setting, in which neural activations are hidden and need to be learned through training to provide a correct output, backpropagation through time (BPTT) is necessary to learn long-term dependencies in the data.",
+    "source":"2311.10200v1.txt"
+  },
+  {
+    "question":"What is open-set semi-supervised learning?",
+    "answer":"In this paper, we study this more realistic setting called open-set semi-supervised learning, where the goal is to learn both a good closed-set classifier to classify inliers and to detect outliers as shown in Fig.",
+    "source":"2311.10572v1.txt"
+  },
+  {
+    "question":"What is rich supervised information?",
+    "answer":"In deep learning, rich supervised information is crucial for the generalization ability of deep models.",
+    "source":"2311.11019v1.txt"
+  },
+  {
+    "question":"What is Single-objective optimization (SOO)?",
+    "answer":"Single-objective optimization (SOO) is often seen as an alternative to MOO.",
+    "source":"2311.11288v1.txt"
+  },
+  {
+    "question":"Why is inference in probabilistic models with categorical latent variables computationally intractable?",
+    "answer":"Unfortunately, inference in probabilistic models with categorical latent variables is usually computationally intractable due to its combinatorial nature.",
+    "source":"2311.12569v1.txt"
+  },
+  {
+    "question":"What is Risk Preference?",
+    "answer":"Risk Preference is of crucial importance for making investment decisions.",
+    "source":"2311.13864v1.txt"
+  },
+  {
+    "question":"What is a B test, also known as controlled experiment?",
+    "answer":"B test, also known as controlled experiment, is an effective way to evaluate treatment effect of new product features and facilitate data-driven decision-making [14].",
+    "source":"2311.14042v1.txt"
+  },
+  {
+    "question":"What is Clustering?",
+    "answer":"Clustering is a fundamental task in unsupervised learning.",
+    "source":"2311.14310v1.txt"
+  },
+  {
+    "question":"What is the impact of statistical heterogeneity on the data domain on each client?",
+    "answer":"Due to statistical heterogeneity, the data domain on each client is biased, which does not contain the data of all labels\u00a0[45, 37, 79, 67, 69, 84].",
+    "source":"2311.14975v1.txt"
+  },
+  {
+    "question":"What is Why a patient?",
+    "answer":"Why a patient is predicted to have a brain tumor gaur2022explanation ? Why a credit application is rejected grath2018interpretable ? Why a picture is identified as an electric guitar ribeiro2016should ? As black-box machine learning models continue to evolve in complexity and are employed in critical applications, it is imperative to provide explanations for their predictions, making interpretability a central concern arrieta2020explainable.",
+    "source":"2311.15722v1.txt"
+  },
+  {
+    "question":"What determines the binding specificity of antibodies?",
+    "answer":"Notably, the binding specificity of antibodies is largely determined by their complementarity-determining regions (CDRs).",
+    "source":"2311.16126v1.txt"
+  },
+  {
+    "question":"How has reinforcement learning shifted from reward maximization to general capability?",
+    "answer":"While the standard paradigm in reinforcement learning (RL) is aimed at maximizing a specific reward signal, the focus of the field has gradually shifted towards the pursuit of generally capable agents [20, 40, 1].",
+    "source":"2311.16996v1.txt"
+  },
+  {
+    "question":"What is AI-driven content generation?",
+    "answer":"AI-driven content generation, which is now able to synthesize convincing media such as images, audio, and animations, conditioned on human input.",
+    "source":"2311.17053v1.txt"
+  },
+  {
+    "question":"What is sparse recovery, also known as compressed sensing?",
+    "answer":"Sparse recovery, also known as compressed sensing, is the study of under-determined systems of equations subject to a sparsity constraint.",
+    "source":"2311.17281v1.txt"
+  },
+  {
+    "question":"What is the difference between vector quantization and product quantization (PQ)?",
+    "answer":"Vector quantization refers to the discretization of vectors into codes, while product quantization (PQ) is a variant of the sharp increase in the number of codes using VQ multiple times.",
+    "source":"2311.18213v1.txt"
+  },
+  {
+    "question":"What is Multi-Head Cross-Attention (MHCA)?",
+    "answer":"Multi-Head Cross-Attention (MHCA) is a variant of the MHSA operation\u00a0(1), where query tokens come from one expert (e1subscript\ud835\udc521e_{1}) and key and value tokens come from another expert (e2subscript\ud835\udc522e_{2}).",
+    "source":"2311.18825v1.txt"
+  },
+  {
+    "question":"What is Imitation learning (IL)?",
+    "answer":"Imitation learning (IL) is a framework where an agent learns behavior by mimicking an expert\u2019s demonstration without access to true rewards.",
+    "source":"2312.00548v1.txt"
+  },
+  {
+    "question":"What is An important distinction between MR and existing approaches (like IPW or DR)?",
+    "answer":"An important distinction between MR and existing approaches (like IPW or DR) is that, when estimating \ud835\udd3c\u200b[Y\u200b(a)]\ud835\udd3cdelimited-[]\ud835\udc4c\ud835\udc4e\\mathbb{E}[Y(a)], the existing approaches only use datapoints in \ud835\udc9f\ud835\udc9f\\mathcal{D} with A=a\ud835\udc34\ud835\udc4eA=a.",
+    "source":"2312.01457v1.txt"
+  },
+  {
+    "question":"Why for AIME is more challenging?",
+    "answer":"We think this is more challenging for AIME since it needs to infer a sequence of actions, while BCO(0) is operating on point estimation.",
+    "source":"2312.02019v1.txt"
+  },
+  {
+    "question":"What is the need to process eigenvectors?",
+    "answer":"The need to process eigenvectors is ubiquitous in machine learning and the computational sciences.",
+    "source":"2312.02339v1.txt"
+  },
+  {
+    "question":"What is reward signal?",
+    "answer":"This reward signal is often carefully designed by domain experts to communicate the intended goal for the agent to accomplish.",
+    "source":"2312.02405v1.txt"
+  },
+  {
+    "question":"How do you rank native ads for an incoming user and their specific context according to the cost per click (CPC) price type, a score (or expected revenue)?",
+    "answer":"In order to rank native ads for an incoming user and their specific context according to the cost per click (CPC) price type, a score (or expected revenue) is calculated by multiplying the advertiser\u2019s bid and the predicted click probability (pCTR) for each ad.",
+    "source":"2312.05052v1.txt"
+  }
+]
