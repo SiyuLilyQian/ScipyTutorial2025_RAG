@@ -74,7 +74,7 @@ This is your main tutorial notebook with:
 ### Event Details
 **"Retrieval Augmented Generation (RAG) for LLMs"**  
 📅 **When:** July 7, 2025, 1:30–5:30 PM (US/Pacific)  
-📍 **Where:** Ballroom C, SciPy 2025 Conference
+📍 **Where:** Ballroom A, SciPy 2025 Conference
 
 ### Why RAG Matters
 Large Language Models face critical limitations:
